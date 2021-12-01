@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+    <div class="row mt-5">
+    <div class="col-lg-6 col-sm-6 col-md-6">
+    <div class="form-group">
+        <input type="file" name="file[]" id="img" class="form-control img" accept=".png, .jpg, .jpeg"onchange="readURL(this)" multiple>
+    </div></div>
+    <div class="col-lg-6 col-sm-6 col-md-6">
+    <button type="submit" class="btn btn-success" id="imgSub">Upload</button>
+    </div>
+    <div id="gall">
+        
+    </div>
+    <p id="msg"></p>
+    <div class="col-lg-6 col-sm-6 col-md-6">
+    <table class="table">
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Image</th>
+          </tr>
+        </thead>
+        <tbody id="tbimage">
+
+        </tbody>
+      </table>
+      </div>
+      <div class="col-lg-6 col-sm-6 col-md-6">
+        <table class="table">
+            <thead class="thead-dark">
+              <tr>
+                <th scope="col">Result of Prediction</th>
+              </tr>
+            </thead>
+            <tbody id="tbpredict">
+    
+            </tbody>
+          </table>
+      </div>
+      
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="{{ url_for('static', filename='js/imageConvert.js') }}"></script> 
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script> 
+</div>
+</div>
+</body>
+</html>
